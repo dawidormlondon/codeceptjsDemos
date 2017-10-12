@@ -11,9 +11,6 @@
         "script": 60000,
         "page load": 15000
       }
-    },
-    "WebDriverIOHelper": {
-      "require": "./WebDriverIOHelper.js"
     }
   },
   "include": {
