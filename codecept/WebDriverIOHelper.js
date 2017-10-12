@@ -10,8 +10,9 @@
 class WebDriverIOHelper extends Helper {
 
     async tryLocate() {
-        const element = await this.helpers['WebDriverIO'].browser.element("=Most Popular TV");
-        element.scroll();
+        const browser = await this.helpers['WebDriverIO'].browser;
+        const text = await browser.getText('.install-label'); // http://webdriver.io/guide/usage/selectors.html#Element-with-certain-text
+        console.log(text); // should output: "INSTALL"
     }
 
 }
