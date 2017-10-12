@@ -1,0 +1,42 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://localhost:3000",
+      "windowSize": "maximize",
+      "browser": "chrome",
+      "restart": true,
+      "smartWait": 5000,
+      "timeouts": {
+        "script": 60000,
+        "page load": 15000
+      }
+    },
+    "WebDriverIOHelper": {
+      "require": "./WebDriverIOHelper.js"
+    }
+  },
+  "include": {
+    "I": "./custom_steps.js"
+  },
+  "mocha": {
+    "reporterOptions": {
+      "mochaFile": "./output/result.xml"
+    }
+  },
+  "bootstrap": "./bootstrap.js",
+  "teardown": null,
+  "hooks": [],
+  "tests": "./tests/codeceptjsExample_tests.js",
+  "timeout": 5000,
+  "multiple": {
+    "default": {
+      "grep": "signin",
+      "browsers": [
+        "chrome",
+        "safari"
+      ]
+    }
+  },
+  "name": "tests"
+}

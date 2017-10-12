@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  codeceptjs:
+    image: codeception/codeceptjs
+    depends_on:
+      - selenium-chrome
+      - web
+    volumes:
+      - ./codecept:/tests
+  web:
+    image: node
+    command: node app/server.js
+    volumes:
+      - .:/app
+  selenium-chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - '4444'
+      - '5900'
