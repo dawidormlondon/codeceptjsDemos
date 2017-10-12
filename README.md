@@ -6,5 +6,4 @@ in an attempt to run the tests in a headless chrome browser. It is currently not
 steps:
 1. Start Docker for Mac
 2. In terminal, ```npm i```
-3. In terminal, ```docker-compose up```
-4. In terminal, ```npm run automate```
+3. In terminal, ```npm run automate```
