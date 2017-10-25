@@ -19,13 +19,11 @@ class WebDriverIOHelper extends Helper {
 
         return browser.element(selector).getText()
             .then((res) => {
-                // console.log('Yay, found the element', res);
                 return res;
             })
             .catch((err) => {
                 // Catch the error because webdriver.io throws if the element could not be found
                 // Source: https://github.com/webdriverio/webdriverio/blob/master/lib/protocol/element.js
-                // console.log('Element does not exist');
                 return null;
             });
     }
